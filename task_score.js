@@ -24,17 +24,18 @@ function showAverageScore() {
   const introAverage = averagePoints(pointsIntroductionHomeWork);
   const gitAverage = averagePoints(pointsGitHomeWork);
   const jsAverage = averagePoints(pointsJSHomeWork);
+  const sliceUserName = userName.slice(0, 1); // обрезка имени до первой буквы
 
   console.log(
-    `Студент ${userName} ${userSurname}. Средний балл по модулю "Введение": ${introAverage}`
+    `Студент ${sliceUserName}.${userSurname}. Средний балл по модулю "Введение": ${introAverage}`
   );
 
   console.log(
-    `Студент ${userName} ${userSurname}. Средний балл по модулю "Git": ${gitAverage}`
+    `Студент ${sliceUserName}.${userSurname}. Средний балл по модулю "Git": ${gitAverage}`
   );
 
   console.log(
-    `Студент ${userName} ${userSurname}. Средний балл по модулю "JS": ${jsAverage}`
+    `Студент ${sliceUserName}.${userSurname}. Средний балл по модулю "JS": ${jsAverage}`
   );
 }
 
