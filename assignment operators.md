@@ -38,5 +38,12 @@ Operator	|Example	|Same As|Description|
 
 
 _______________________
+# JavaScript Arithmetic Operators
+
+Operator|	Description|
+|-|-|
+|++	|Increment|
+|--	|Decrement|
+_______________________
 ## Resource 
 https://www.w3schools.com/js/js_assignment.asp
