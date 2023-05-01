@@ -1,4 +1,3 @@
-
 function testSum() {
   let expencesExamples = 
   [
@@ -9,6 +8,7 @@ function testSum() {
 
   expencesExamples.forEach(function (example) {
     getSum(example.yearlyExpences);
+    getMonth(example.yearlyExpences);
   });
 }
 
@@ -17,7 +17,27 @@ function getSum(expenses) {
   expenses.forEach((expense) => {
     sum += expense > 1000 ? expense : 0;
   });
-  console.log(sum);
+  console.log(`Общая сумма затрат (суммы выше 1000р за месяц): ${sum}`);
+}
+
+function getMonth(expenses) {
+  console.log(`Затраты <= 1000:`);
+
+  for (let monthIndex = 0; monthIndex < expenses.length; monthIndex++) {
+    
+    let sum = expenses[monthIndex];
+    
+    if (sum > 1000) {
+      continue;  
+    }
+
+    let date = new Date(2023, monthIndex);
+    const options = {month: 'long'};
+    let month = date.toLocaleDateString('ru-ru', options);
+    
+    console.log(`${month}: ${sum}`);
+    
+  }
 }
 
 testSum();
